@@ -3,11 +3,10 @@ import { Component, HostListener, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service';
 
 @Component({
-  selector: 'app-nav',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './nav.component.html',
-  styleUrl: './nav.component.css',
+    selector: 'app-nav',
+    imports: [CommonModule],
+    templateUrl: './nav.component.html',
+    styleUrl: './nav.component.css'
 })
 export class NavComponent {
   isOpen = false;

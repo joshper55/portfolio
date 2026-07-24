@@ -5,11 +5,10 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
 import { LanguageService } from '../../services/language.service';
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [CommonModule, ScrollRevealDirective],
-  templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css',
+    selector: 'app-projects',
+    imports: [CommonModule, ScrollRevealDirective],
+    templateUrl: './projects.component.html',
+    styleUrl: './projects.component.css'
 })
 export class ProjectsComponent {
   langService = inject(LanguageService);

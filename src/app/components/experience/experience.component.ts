@@ -5,11 +5,10 @@ import { ScrollRevealDirective } from '../../directives/scroll-reveal.directive'
 import { LanguageService } from '../../services/language.service';
 
 @Component({
-  selector: 'app-experience',
-  standalone: true,
-  imports: [CommonModule, ScrollRevealDirective],
-  templateUrl: './experience.component.html',
-  styleUrl: './experience.component.css',
+    selector: 'app-experience',
+    imports: [CommonModule, ScrollRevealDirective],
+    templateUrl: './experience.component.html',
+    styleUrl: './experience.component.css'
 })
 export class ExperienceComponent {
   langService = inject(LanguageService);

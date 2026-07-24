@@ -10,21 +10,20 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    NavComponent,
-    HeroComponent,
-    AboutComponent,
-    SkillsComponent,
-    ProjectsComponent,
-    ExperienceComponent,
-    EducationComponent,
-    ContactComponent,
-    FooterComponent,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+    selector: 'app-root',
+    imports: [
+        NavComponent,
+        HeroComponent,
+        AboutComponent,
+        SkillsComponent,
+        ProjectsComponent,
+        ExperienceComponent,
+        EducationComponent,
+        ContactComponent,
+        FooterComponent,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'portfolio-jose';
