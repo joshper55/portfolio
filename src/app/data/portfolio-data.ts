@@ -12,7 +12,7 @@ export interface LocalizedBullets {
 
 export interface Project {
   id: string;
-  title: string;
+  title: LocalizedText; 
   stack: string[];
   summary: LocalizedText;
   bullets: LocalizedBullets;
@@ -49,7 +49,10 @@ export const SKILLS: SkillGroup[] = [
 export const PROJECTS: Project[] = [
   {
     id: 'caja-cobro',
-    title: 'Caja de Cobro Municipal',
+    title: {
+      es: 'Caja de Cobro Municipal (Xitoca)',
+      en: 'Xitoca (Municipal Revenue & Cashier System)'
+    },
     stack: ['Spring Boot', 'Angular', 'SQL Server', 'JasperReports'],
     summary: {
       es: 'Sistema de ingresos municipales para el ayuntamiento de Cuautitlán, con más de 200 trámites cobrables.',
@@ -72,7 +75,10 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'tramitta',
-    title: 'Tramitta — Gestión de Trámites',
+    title: {
+      es: 'Tramitta — Gestión de Trámites',
+      en: 'Tramitta — Online Procedure Management Platform'
+    },
     stack: ['BPMN', 'Spring Boot', 'Angular'],
     summary: {
       es: 'Plataforma de trámites en línea para diversas dependencias gubernamentales.',
@@ -93,7 +99,10 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'emergencias',
-    title: 'Sistema de Atención de Emergencias',
+    title: {
+      es: 'Sistema de Atención de Emergencias (SOS)',
+      en: 'SOS (Real-Time Emergency Response System)'
+    },
     stack: ['Go', 'PostgreSQL', 'WebSockets', 'Ionic'],
     summary: {
       es: 'Sistema en tiempo real usado por personal de seguridad para alertas y seguimiento de unidades.',
@@ -114,7 +123,10 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'erp-metalurgico',
-    title: 'ERP Metalúrgico',
+    title: {
+      es: 'ERP Metalúrgico',
+      en: 'Metallurgical ERP System'
+    },
     stack: ['Angular', 'Go', 'SQL Server'],
     summary: {
       es: 'ERP full stack para una maquila metalúrgica de gran tamaño, digitalizando flujos antes manejados en Excel.',
@@ -137,7 +149,10 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'pld',
-    title: 'PLD — Prevención de Lavado de Dinero',
+    title: {
+      es: 'PLD — Prevención de Lavado de Dinero',
+      en: 'AML — Anti-Money Laundering System'
+    },
     stack: ['Spring Boot', 'Python', 'FastAPI', 'Tesseract', 'LLM'],
     summary: {
       es: 'Sistema de validación de documentos con OCR e interpretación por LLM.',
@@ -160,7 +175,10 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'ide-geo',
-    title: 'IDE — Infraestructura de Datos Espaciales',
+    title: {
+      es: 'IDE — Infraestructura de Datos Espaciales',
+      en: 'Cartographic Management System'
+    },
     stack: ['Angular', 'GeoServer', 'PostGIS'],
     summary: {
       es: 'Plataforma de gestión de capas geoespaciales.',
@@ -178,6 +196,7 @@ export const PROJECTS: Project[] = [
     },
   },
 ];
+
 
 export const EXPERIENCE: Experience[] = [
   {
