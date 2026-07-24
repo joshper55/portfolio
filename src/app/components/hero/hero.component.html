@@ -1,0 +1,102 @@
+<section id="hero" class="relative min-h-screen flex items-center overflow-hidden pt-24">
+  <!-- Fondos y gradientes permanecen igual -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-brand-700/30 blur-3xl"></div>
+    <div class="absolute top-1/3 -right-40 h-96 w-96 rounded-full bg-brand-500/20 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.06)_1px,transparent_0)] [background-size:28px_28px]"></div>
+  </div>
+
+  <div class="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-[1.2fr_0.8fr] gap-12 items-center">
+    <div>
+      @if (langService.currentLang() === 'es') {
+        <p class="font-mono text-brand-300 text-sm mb-4 tracking-wide">Hola, soy</p>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
+          Jose Eduardo Pereda
+        </h1>
+        <p class="mt-4 text-xl sm:text-2xl font-semibold text-brand-300">
+          Full Stack Developer especializado en Spring Boot
+        </p>
+        <p class="mt-6 text-slate-400 text-lg leading-relaxed max-w-xl">
+          Ingeniero de Software con 4 años de experiencia desarrollando aplicaciones empresariales
+          y gubernamentales con Java, Spring Boot, Golang y Angular. Experiencia end-to-end en
+          sistemas de recaudación, plataformas ERP, soluciones BPMN y GIS en tiempo real.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#projects" class="rounded-full bg-brand-600 hover:bg-brand-500 text-white font-semibold px-6 py-3 transition-colors">
+            Ver proyectos
+          </a>
+          <!-- Botón de descarga de CV en Español -->
+          <a 
+            [href]="cvUrl" 
+            download="CV_FullStackDev_JosePereda_ESP.pdf"
+            class="rounded-full border border-white/20 hover:border-brand-400 text-slate-200 font-semibold px-6 py-3 transition-colors flex items-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Descargar CV
+          </a>
+        </div>
+      } @else {
+        <p class="font-mono text-brand-300 text-sm mb-4 tracking-wide">Hi, I am</p>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white leading-tight">
+          Jose Eduardo Pereda
+        </h1>
+        <p class="mt-4 text-xl sm:text-2xl font-semibold text-brand-300">
+          Full Stack Developer specialized in Spring Boot
+        </p>
+        <p class="mt-6 text-slate-400 text-lg leading-relaxed max-w-xl">
+          Software Developer with 4 years of experience developing enterprise and government applications
+          using Java, Spring Boot, Golang, and Angular. End-to-end experience in revenue systems,
+          ERP platforms, BPMN solutions, and real-time GIS.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#projects" class="rounded-full bg-brand-600 hover:bg-brand-500 text-white font-semibold px-6 py-3 transition-colors">
+            View Projects
+          </a>
+          <!-- Botón de descarga de CV en Inglés -->
+          <a 
+            [href]="cvUrl" 
+            download="CV_FullStackDev_JosePereda_ENG.pdf"
+            class="rounded-full border border-white/20 hover:border-brand-400 text-slate-200 font-semibold px-6 py-3 transition-colors flex items-center gap-2"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download CV
+          </a>
+        </div>
+      }
+
+      <!-- Redes sociales y tarjeta lateral se mantienen exactamente igual -->
+      <div class="mt-8 flex items-center gap-5 text-slate-400">
+        <a href="https://linkedin.com/in/josh-pereda-dev" target="_blank" rel="noopener" class="hover:text-brand-300 transition-colors" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+        </a>
+        <a href="mailto:epereda@cianet.mx" class="hover:text-brand-300 transition-colors" aria-label="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M3 8l9 6 9-6M3 8v8a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2z" /></svg>
+        </a>
+        <a href="https://wa.me/526181732738" target="_blank" rel="noopener" class="hover:text-brand-300 transition-colors" aria-label="WhatsApp">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.4-5.9c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.2.2-.4.1-.1 0-.3 0-.4 0-.1-.5-1.3-.7-1.7-.2-.5-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.4 3.8 3.4.5.2 1 .4 1.3.5.5.2 1 .1 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto">
+      <div class="h-64 w-64 sm:h-80 sm:w-80 rounded-3xl bg-gradient-to-br from-brand-500/20 to-brand-800/40 border border-white/10 backdrop-blur-sm flex items-center justify-center">
+        <span class="font-mono text-6xl sm:text-7xl font-bold text-brand-300">JP</span>
+      </div>
+      <div class="absolute -bottom-4 -left-4 bg-ink-800 border border-white/10 rounded-xl px-4 py-3 shadow-xl">
+        @if (langService.currentLang() === 'es') {
+          <p class="text-xs text-slate-400">Ubicación</p>
+          <p class="text-sm font-semibold text-white">Durango, México 🇲🇽</p>
+        } @else {
+          <p class="text-xs text-slate-400">Location</p>
+          <p class="text-sm font-semibold text-white">Durango, Mexico 🇲🇽</p>
+        }
+      </div>
+    </div>
+  </div>
+</section>

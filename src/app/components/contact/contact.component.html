@@ -1,0 +1,38 @@
+<section id="contact" class="bg-ink-800/50 border-t border-white/5">
+  <div class="max-w-4xl mx-auto px-6 py-24 text-center" appScrollReveal>
+    
+    <!-- Textos informativos según idioma -->
+    @if (langService.currentLang() === 'es') {
+      <p class="font-mono text-brand-400 text-sm mb-2">06. Contacto</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">¿Trabajamos juntos?</h2>
+      <p class="text-slate-400 max-w-xl mx-auto mb-10">
+        Estoy abierto a nuevas oportunidades y proyectos freelance. Escríbeme por el medio que prefieras.
+      </p>
+    } @else {
+      <p class="font-mono text-brand-400 text-sm mb-2">06. Contact</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's work together?</h2>
+      <p class="text-slate-400 max-w-xl mx-auto mb-10">
+        I am open to new opportunities and freelance projects. Reach out through your preferred channel.
+      </p>
+    }
+
+    <!-- Botones de acción -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="mailto:epereda@cianet.mx" class="w-full sm:w-auto rounded-full bg-brand-600 hover:bg-brand-500 text-white font-semibold px-8 py-3 transition-colors">
+        epereda&#64;cianet.mx
+      </a>
+      
+      <a href="https://wa.me/526181732738" target="_blank" rel="noopener" class="w-full sm:w-auto rounded-full border border-white/20 hover:border-brand-400 text-slate-200 font-semibold px-8 py-3 transition-colors">
+        @if (langService.currentLang() === 'es') {
+          Chatear en WhatsApp
+        } @else {
+          Chat on WhatsApp
+        }
+      </a>
+      
+      <a href="https://linkedin.com/in/josh-pereda-dev" target="_blank" rel="noopener" class="w-full sm:w-auto rounded-full border border-white/20 hover:border-brand-400 text-slate-200 font-semibold px-8 py-3 transition-colors">
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>

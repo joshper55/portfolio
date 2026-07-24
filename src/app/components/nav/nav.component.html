@@ -1,0 +1,56 @@
+<header
+  class="fixed top-0 inset-x-0 z-50 transition-all duration-300"
+  [class.bg-ink-900]="isScrolled"
+  [class.shadow-lg]="isScrolled"
+  [class.shadow-black]="isScrolled"
+  [class.bg-transparent]="!isScrolled"
+>
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#hero" class="font-mono text-brand-300 font-bold text-lg tracking-tight">
+      JEP<span class="text-white">.dev</span>
+    </a>
+
+    <button 
+      (click)="langService.toggleLanguage()" 
+      class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 text-xs font-medium bg-white/5 hover:bg-white/10 transition text-slate-300 hover:text-white">
+      <span>🌐</span>
+      <span>{{ langService.currentLang() === 'es' ? 'ENGLISH' : 'ESPAÑOL' }}</span>
+    </button>
+
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+      <li *ngFor="let link of links">
+        <a [href]="link.href" class="hover:text-brand-300 transition-colors">{{ link.label }}</a>
+      </li>
+    </ul>
+
+    <a
+      href="#contact"
+      class="hidden md:inline-flex items-center rounded-full bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold px-5 py-2 transition-colors"
+    >
+      {{ langService.currentLang() === 'es' ? 'Contáctame' : 'Contact me' }}
+    </a>
+
+    <button
+      class="md:hidden text-slate-200"
+      (click)="toggle()"
+      aria-label="Menu"
+    >
+      <svg *ngIf="!isOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg *ngIf="isOpen" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Menú Mobile -->
+  <div *ngIf="isOpen" class="md:hidden bg-ink-900 border-t border-white/10 px-6 py-4 flex flex-col gap-4">
+    <a *ngFor="let link of links" [href]="link.href" (click)="close()" class="text-slate-200 font-medium">
+      {{ link.label }}
+    </a>
+    <a href="#contact" (click)="close()" class="rounded-full bg-brand-600 text-white text-center font-semibold px-5 py-2">
+      {{ langService.currentLang() === 'es' ? 'Contáctame' : 'Contact me' }}
+    </a>
+  </div>
+</header>

@@ -1,0 +1,47 @@
+<section id="about" class="max-w-6xl mx-auto px-6 py-24">
+  <div appScrollReveal>
+    
+    <!-- Título y subtítulo condicionales -->
+    @if (langService.currentLang() === 'es') {
+      <p class="font-mono text-brand-400 text-sm mb-2">01. Sobre mí</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">¿Quién soy?</h2>
+    } @else {
+      <p class="font-mono text-brand-400 text-sm mb-2">01. About me</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">Who am I?</h2>
+    }
+
+    <div class="grid md:grid-cols-[1.3fr_0.7fr] gap-12">
+      
+      <!-- Descripción condicional -->
+      <p class="text-slate-400 text-lg leading-relaxed">
+        @if (langService.currentLang() === 'es') {
+          Soy Ingeniero de Software con más de 4 años de experiencia desarrollando y dando soporte a
+          aplicaciones empresariales y gubernamentales usando Java, Spring Boot, Golang y Angular.
+          Tengo experiencia end-to-end en sistemas de recaudación gubernamental, plataformas ERP,
+          soluciones BPMN y aplicaciones GIS/geolocalización en tiempo real — incluyendo despliegue
+          en Linux, bases de datos SQL Server/PostgreSQL, y levantamiento de requerimientos
+          directamente con clientes. Me gusta involucrarme en el ciclo completo del producto: desde
+          el diseño de la API hasta el soporte productivo.
+        } @else {
+          I am a Software Developer with more than 4 years of experience developing and supporting
+          enterprise and government applications using Java, Spring Boot, Golang, and Angular.
+          I have end-to-end experience in government tax collection systems, ERP platforms,
+          BPMN solutions, and real-time GIS/geolocation applications — including Linux deployment,
+          SQL Server/PostgreSQL databases, and gathering requirements directly with clients. 
+          I like to be involved in the full product lifecycle: from API design to production support.
+        }
+      </p>
+
+      <!-- Estadísticas dinámicas según el idioma activo -->
+      <div class="grid grid-cols-3 md:grid-cols-1 gap-4">
+        <div *ngFor="let stat of stats" class="bg-ink-800 border border-white/10 rounded-2xl p-5 text-center md:text-left">
+          <p class="text-3xl font-extrabold text-brand-300">{{ stat.value }}</p>
+          <p class="text-sm text-slate-400 mt-1">
+            {{ stat.label[langService.currentLang()] }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
