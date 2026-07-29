@@ -202,7 +202,7 @@ export const EXPERIENCE: Experience[] = [
   {
     company: 'CIANET',
     role: { es: 'Software Engineer', en: 'Software Engineer' },
-    location: 'Durango, México',
+    location: 'Durango/Querétaro, México',
     period: { es: 'Mayo 2022 – Actualidad', en: 'May 2022 – Present' },
     bullets: {
       es: [
