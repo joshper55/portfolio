@@ -39,10 +39,10 @@ export interface SkillGroup {
 }
 
 export const SKILLS: SkillGroup[] = [
-  { category: { es: 'Backend', en: 'Backend' }, items: ['Spring Boot (Java 8 y 21)', 'Gin (Golang)', 'FastAPI (Python)'] },
+  { category: { es: 'Backend', en: 'Backend' }, items: ['Spring Boot (Java 8 y 21)', 'Gin (Golang)', 'NodeJS','FastAPI (Python)'] },
   { category: { es: 'Frontend', en: 'Frontend' }, items: ['Angular', 'TypeScript', 'JavaScript', 'Ionic', 'HTML', 'CSS', 'PyQT'] },
-  { category: { es: 'Bases de datos', en: 'Databases' }, items: ['PostgreSQL', 'SQL Server', 'MySQL'] },
-  { category: { es: 'DevOps', en: 'DevOps' }, items: ['Linux', 'Git (GitLab, Bitbucket)', 'Jira', 'Postman', 'Docker'] },
+  { category: { es: 'Bases de datos', en: 'Databases' }, items: ['PostgreSQL', 'SQL Server', 'MySQL', 'MongoDB'] },
+  { category: { es: 'DevOps', en: 'DevOps' }, items: ['Linux', 'Git (GitLab, Bitbucket)', 'Jira', 'Postman', 'Docker', 'Cloudflare', 'Render' ] },
   { category: { es: 'Integraciones', en: 'Integrations' }, items: ['REST APIs', 'JWT', 'OAuth2', 'JasperReports', 'QGIS'] },
 ];
 
